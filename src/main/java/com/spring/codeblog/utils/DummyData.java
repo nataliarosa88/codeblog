@@ -16,7 +16,7 @@ public class DummyData {
     @Autowired
     CodeBlogRepository codeBlogRepository;
 
-//    @PostConstruct
+    @PostConstruct
     public void savePosts(){
 
         List<Post> postList = new ArrayList<>();
@@ -35,12 +35,12 @@ public class DummyData {
         postList.add(post1);
         postList.add(post2);
 
-//        for(Post post: postList){
-//            Post postSaved = codeBlogRepository.save(post);
-//            System.out.println(postSaved.getId());
-//        }
+        for(Post post: postList){
+            Post postSaved = codeBlogRepository.save(post);
+            System.out.println(postSaved.getId());
+        }
 
-        codeBlogRepository.saveAll(postList);
-        System.out.println(postList);
+//        codeBlogRepository.saveAll(postList);
+//        System.out.println(postList);
     }
 }

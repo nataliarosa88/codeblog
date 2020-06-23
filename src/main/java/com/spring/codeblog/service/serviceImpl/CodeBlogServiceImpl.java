@@ -20,7 +20,9 @@ public class CodeBlogServiceImpl implements CodeBlogService {
     }
 
     @Override
-    public Post findById(Long id) { return codeBlogRepository.findById(id).get(); }
+    public Post findById(long id) {
+        return codeBlogRepository.findById(id).get();
+    }
 
     @Override
     public Post save(Post post) {
